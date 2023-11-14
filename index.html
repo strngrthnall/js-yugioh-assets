@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yu-Gi-Oh Jo-ken-po</title>
+
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="src/styles/reset.css">
+
+  <!-- RPGGui framework -->
+  <link rel="stylesheet" href="src/styles/buttons.css">
+  <link rel="stylesheet" href="src/styles/containers_and_frames.css">
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+  <div class="bg-video">
+    <video class="video" autoplay loop muted>
+      <source src="src/assets/video/yugi.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="container">
+    <div class="container__left framed-golden-2">
+      <div class="score_box frame">
+        <span id="score_points">Win : 0 Lose: 0</span>
+      </div>
+      <div class="menu_avatar">
+        <img id="card-img">
+      </div>
+      <div class="card_details frame">
+        <p id="card-name">a</p>
+        <p id="card-type">b</p>
+      </div>
+    </div>
+    <div class="container__right">
+      <div class="card-box__container">
+        <div id="computer-cards" class="card-box framed">
+        </div>
+        <div class="card-versus__container">
+          <div class="versus-top">
+            <div class="card-infield">
+              <img id="player-field-card" >
+            </div>
+            <img src="src/assets/icons/millenium2.png" height="100px">
+            <div class="card-infield">
+              <img id="computer-field-card" ">
+            </div>
+          </div>
+          <div class="versus-bottom">
+            <button id="next-duel" class="rpgui-button" onclick="resetDuel()">YOU WIN!</button>
+          </div>
+        </div>
+        <div id="player-cards" class="card-box framed">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/scripts/engine.js" defer></script>
+</body>
+</html>
