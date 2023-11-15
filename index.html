@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yu-Gi-Oh Jo-ken-po</title>
+  
 
   <!-- Reset CSS -->
   <link rel="stylesheet" href="src/styles/reset.css">
@@ -14,8 +15,15 @@
 
   <!-- Main Style -->
   <link rel="stylesheet" href="src/styles/main.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <audio id="bgm" loop>
+    <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+  </audio>
+
   <div class="bg-video">
     <video class="video" autoplay loop muted>
       <source src="src/assets/video/yugi.mp4" type="video/mp4">
@@ -30,8 +38,8 @@
         <img id="card-img">
       </div>
       <div class="card_details frame">
-        <p id="card-name">a</p>
-        <p id="card-type">b</p>
+        <p id="card-name">Select</p>
+        <p id="card-type">a card</p>
       </div>
     </div>
     <div class="container__right">
@@ -41,11 +49,11 @@
         <div class="card-versus__container">
           <div class="versus-top">
             <div class="card-infield">
-              <img id="player-field-card" >
+              <img id="player-field-card" class="drawed-card">
             </div>
             <img src="src/assets/icons/millenium2.png" height="100px">
             <div class="card-infield">
-              <img id="computer-field-card" ">
+              <img id="computer-field-card" class="drawed-card">
             </div>
           </div>
           <div class="versus-bottom">
